@@ -10,7 +10,7 @@ When the dnsmasq daemon is configured for a device or a network, domains contain
 ## Getting Started
 To use the script in this repo, you either need to clone or download this repo onto your machine as shown below;
 ```bash
-git clone https://github.com/FakeWickey/Update-Blocklist.git
+git clone https://github.com/FakeWickey/update-blocklist.git
 ```
 
 ## Prerequisites

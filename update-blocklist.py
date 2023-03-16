@@ -2,7 +2,7 @@
 
 # The approach is to download adlists, and find out what's usable for blocking, then filter out the domains to a textfile/configuration file. Splitting into lines because of line based formatting
 
-import requests, re
+import requests, re, subprocess
 
 list_of_adlists = [
     {
@@ -209,3 +209,5 @@ for domain in final_list_of_domains:
     file_pointer.writelines(ip_address)
 
 file_pointer.close()
+
+subprocess.run("systemctl reload dnsmasq.service", shell=True)

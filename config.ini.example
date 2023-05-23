@@ -1,0 +1,25 @@
+[credential]
+username = admin
+salt = V_-@09as;
+
+[application]
+secret_key = ofsdfsjkfsdiofhjqnjk34hn23423sdfdfsfsjwawksdjak
+passwd_hash = 2b0a45b524350b9e52871e77d010cb99ef79379d87f8886138603f0a2b1f9f52
+pepper = pepperpepperExamplepepper5242
+
+[database]
+username = pihole
+password = 1234
+host = localhost
+port = 3306
+database_name = pihole
+
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+
+[advanced]
+
+# If true, enables the frontend and database functionality.
+# Otherwise, the script will run in standalone mode.
+enable_advanced_mode = False
+

@@ -37,6 +37,16 @@ nameserver 2606:4700:4700:1111
 The script fills the hosts.adserver file with localhost ip's and domains.
 dnsmasq reads from /etc/hosts.adserver to resolve domains before asking an upstream server.
 
+
+### Config.ini, database and frontend
+To use the script, you also have to specify some rules in the config.ini file, it is responsible
+for multiple different behaviours of the script, and you should tweek it for your needs.
+
+The config.ini.example file has the structure, and you can copy it to your new config.ini file, or simply rename the file to config.ini
+
+The option for using a database is optional, its purpose is to be used with the frontend, and can be turned on inside the config file with advanced mode enabled
+When using the frontend, you don't have to specify the adlist in the config file
+
 ## Start dnsmasq
 Now, start, check and enable the dnsmasq service with the following commands:
 ```bash

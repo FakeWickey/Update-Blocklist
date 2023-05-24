@@ -78,15 +78,11 @@ if advanced_mode:
     script_enabled_value = dict(general_settings_data)['script_enabled']
 else:
     # Get script_enabled value from config.ini
-    script_enabled = config.get('general', 'script_enabled')
-    if script_enabled == True:
-        script_enabled_value = 1
-    else:
-        script_enabled_value = 0
+    script_enabled_value = config.getboolean('general', 'script_enabled')
 
 # empty hosts_file if script is not enabled,
 # resulting in no domain being blocked by dnsmasqd
-if script_enabled_value == 0:
+if not script_enabled_value:
     file_pointer = open(hosts_file_path, 'w')
 
     file_pointer.writelines('')
